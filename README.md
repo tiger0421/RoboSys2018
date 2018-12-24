@@ -1,2 +1,4 @@
 # RoboSys2018
-Lecture in my university
+When you win the toss, raspi turn LED on.
+
+
