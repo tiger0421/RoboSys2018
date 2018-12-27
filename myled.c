@@ -16,15 +16,15 @@ static volatile u32 *gpio_base = NULL;
 
 static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_t* pos){
     char hand, cp_hand;
-    char ex_hand[4] = {'g', 'x', 'p', '\0'};
+    char ex_hand[4][9] = {"Rock", "Scissors", "Paper", '\0'};
     if(copy_from_user(&hand,buf,sizeof(char))) return -EFAULT;
     if(hand != '\n'){
     	cp_hand = get_random_int();
 	cp_hand = cp_hand % 3 + 1;
-    	printk(KERN_INFO "cp_hand = %c\n",ex_hand[cp_hand-1]);
+    	printk(KERN_INFO "cp_hand = %s\n",ex_hand[cp_hand-1]);
 
 //cp_hand: 1 = Rock, 2 = Scissors, 3 = Paper
-    	if((hand == 'g' && cp_hand == 2) || (hand == 'x' && cp_hand == 3) || (hand == 'p' && cp_hand == 1)){
+    	if((hand == 'r' && cp_hand == 2) || (hand == 's' && cp_hand == 3) || (hand == 'p' && cp_hand == 1)){
         	gpio_base[7] = 1<<25;
     	}
     	else{
@@ -36,8 +36,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 
 static ssize_t howTo_read(struct file* filp, char* buf, size_t count, loff_t* pos){
   int size = 0;
-  printk(KERN_INFO "Rock  	->	g\n");
-  printk(KERN_INFO "Scissors	->	x\n");
+  printk(KERN_INFO "Rock  	->	r\n");
+  printk(KERN_INFO "Scissors	->	s\n");
   printk(KERN_INFO "Paper	->	p\n");
   return 0;
 }

@@ -36,6 +36,7 @@ __attribute__((section("__versions"))) = {
 	{ 0x4e6d24c3, __VMLINUX_SYMBOL_STR(get_random_u32) },
 	{ 0xfa2a45e, __VMLINUX_SYMBOL_STR(__memzero) },
 	{ 0x28cc25db, __VMLINUX_SYMBOL_STR(arm_copy_from_user) },
+	{ 0x5f754e5a, __VMLINUX_SYMBOL_STR(memset) },
 	{ 0xf7802486, __VMLINUX_SYMBOL_STR(__aeabi_uidivmod) },
 	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
@@ -48,4 +49,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "AEF34F1566AB3B24A74705B");
+MODULE_INFO(srcversion, "284D31236743E4B107A8EF1");
