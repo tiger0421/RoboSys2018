@@ -1,4 +1,5 @@
 # RoboSys2018 HW1
+16C1069 島田 滉己
 
 # Rock-scissors-paper
 
