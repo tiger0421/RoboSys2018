@@ -1,4 +1,4 @@
-## RoboSys2018 HW1
+# RoboSys2018 HW1
 
 # Rock-scissors-paper
 
