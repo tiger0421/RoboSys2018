@@ -2,13 +2,13 @@
 ##Rock-scissors-paper
 じゃんけんで勝つとLEDが光る
 
-## Description
-#じゃんけんをする方法
+## Usage
+じゃんけんをする方法
 ```
 echo r > /dev/myled0
 ```
 
-#出す手の確認方法
+出す手の確認方法
 ```
 cat /dev/myled0
 ```
@@ -31,3 +31,8 @@ tail /var/log/messages
 ```
 cp_hand = Scissors
 
+##Install
+insmod myled.ko
+
+##LICENCE
+GNU GPL
