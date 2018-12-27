@@ -1,6 +1,6 @@
 ## RoboSys2018 HW1
 
-#Rock-scissors-paper
+# Rock-scissors-paper
 
 じゃんけんで勝つとLEDが光る  
 
@@ -24,10 +24,13 @@ CPの出した手の確認方法(CPがチョキを出した場合)
 ```
 tail /var/log/messages
 ```
-cp_hand = Scissors  
+cp_hand = Scissors
 
-##Install
-insmod myled.ko  
+## Install
+```
+insmod myled.ko
+chmod 666 /dev/myled0
+```
 
-##LICENCE
+## LICENCE
 GNU GPL
